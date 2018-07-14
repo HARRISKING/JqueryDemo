@@ -1,0 +1,945 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" type="text/css" href="one.css">
+</head>
+<body>
+	<!--右侧导航-->
+	<div class="rdh">
+		<span class="rdh1">
+			<span class="bbox1">会员</span>
+			<span class="img"><img src="../icon/13.png"></span>
+		</span>
+		<span class="rdh1">
+			<span class="bbox1">预约</span>
+			<span class="img"><img src="../icon/14.png"></span>
+		</span>
+		<span class="rdh1">
+			<span class="bbox1">我的关注</span>
+			<span class="img"><img src="../icon/15.png"></span>
+		</span>
+		<span class="rdh1">
+			<span class="bbox1">我的收藏</span>
+			<span class="img"><img src="../icon/16.png"></span>
+		</span>
+		<span class="rdh1">
+			<span class="bbox1">顶部</span>
+			<span class="img" id="ttop"><img src="../icon/17.png"></span>
+		</span>
+	</div>
+
+    <!--左侧楼层导航-->
+    <div class="floordh">
+    	<span><a href='#1f'>F1</a></span>
+    	<span><a href='#2f'>F2</a></span>
+    	<span><a href='#3f'>F3</a></span>
+    	<span><a href='#4f'>F4</a></span>
+    	<span><a href='#5f'>F5</a></span>
+    </div>
+
+	<!--登录和注册-->
+	<!--遮罩-->
+	<div class="box" id="boxes"></div>
+    <!--登录部分-->
+    <div class="dl" style="display: none;" id="dl">
+    	<div class="top">
+    		<div><a href="#" class="one">登录</a><hr class="oneHr"></div>
+    		<div><a href="#" class="two">注册</a><hr class="twoHr"></div>
+    		<div class="img" id="cha"><img src="../icon/20.png"></div>
+    	</div>
+    	<div class="content" id="content">
+    		
+    	</div>
+    	<div class="bottom">
+    		<span><img src="../icon/xinlang.png"></span>
+    		<span><img src="../icon/weixin.png"></span>
+    		<span><img src="../icon/QQ.png"></span>
+    	</div>
+    </div>
+    <!--登录表单-->
+    <div class="logins" style="display: none;">
+    <div class="login"> 
+    	<form>
+    		<input type="text" name="username" class="user" placeholder="请输入登录邮箱/手机号">
+    		<p class="error1">请输入正确的邮箱或手机号</p>
+    		<input type="password" name="psw" class="psw" placeholder="6-16位密码，区分大小写，不能用空格">
+    		<p class="error2">请输入6-16位密码，区分大小写，不能使用空格！</p>
+    		<div><input type="checkbox" name="rad" class="radio" checked><span class="left">下次自动登录</span><span class="right">忘记密码</span></div>
+    		<input type="button" name="btn" class="btn" value="登录" id="btnDl">
+    	</form>
+    </div>
+    </div>
+    <!--注册表单-->
+    <div class="loginBefores" style="display: none;">
+    <div class="loginBefore">
+    	<form>
+    		<input type="text" name="username" class="user" placeholder="请输入注册邮箱/手机号">
+    		<p class="error1">请输入正确的邮箱或手机号</p>
+    		<div>
+    			<input type="text" name="yzm" class="yzm" placeholder="请输入验证码">
+    			<span><img src="../verify.png"></span>
+    		</div>
+    		<p class="error2">验证码错误</p>
+    		<input type="button" name="btn" class="btn" value="注册">
+    	</form>
+    </div>
+    </div>
+	<!--头部：包括顶部和logo区-->
+	<header>
+		<div class="main-head">
+			<!--顶部-->
+			<div class="top">
+				<div class="top-left">
+					<a href="javascript:void(0)" class="red" id="denl">亲，请登陆</a>
+					<a href="#">免费注册</a>
+					<a href="#">手机逛慕淘</a>
+				</div>
+				<div class="top-right">
+					<div class="out mutao">
+						<div class="yes"><a href="#">我的慕淘</a><img src="../icon/21.png"></div>
+						<div class="none">已买到的宝贝</div>
+						<div class="none">我的足迹</div>
+					</div>
+					<div class="out shoucang">
+						<div class="yes"><a href="#">收藏夹</a><img src="../icon/21.png"></div>
+						<div class="none">收藏的宝贝</div>
+						<div class="none">收藏的店铺</div>
+					</div>
+					<div class="out ts">
+						<div class="yes"><a href="#">商品分类</a></div>
+					</div>
+					<div class="out maijia">
+						<div class="yes"><a href="#">卖家中心</a><img src="../icon/21.png"></div>
+						<div class="none">免费开店</div>
+						<div class="none">已卖出的宝贝</div>
+						<div class="none">出售中的宝贝</div>
+						<div class="none">卖家服务市场</div>
+						<div class="none">卖家培训中心</div>
+						<div class="none">体验中心</div>
+					</div>
+					<div class="out kefu">
+						<div class="yes"><a href="#">联系客服</a><img src="../icon/21.png"></div>
+						<div class="none">消费者客服</div>
+						<div class="none">卖家商报</div>
+					</div>
+				</div>
+			</div>
+			<hr/>
+			<div class="logo">
+				<div class="img"><img src="../logo.png"/></div>
+				<div class="middle">
+					<input type="text" placeholder="灵魂美食一元抢" class="left">
+					<input type="button" name="btn" value="搜索" class="rights">
+				</div>
+				<div class="right" id="right">
+					<span class="one">
+						<img src="../icon/14.png">
+					</span>
+					<span class="two">购物车</span>
+					<span class="three">|</span>
+					<span class="four">0</span>
+					<span class="five">
+						<img src="../icon/23.png">
+					</span>
+				</div>
+				<div class="right2" id="right">
+					<span class="one2">
+						<img src="../icon/25.png">
+					</span>
+					<span class="two2">购物车</span>
+					<span class="three2">|</span>
+					<span class="four2">0</span>
+					<span class="five2">
+						<img src="../icon/22.png">
+					</span>
+				</div>
+				<div class="shop">
+					<div class="top">最新加入的商品</div>
+					<div class="content">
+					<div>
+						<img src="../cart/1.png" class="img1">
+						<div class="word"><span class="span1">adidas&nbsp;阿迪达斯&nbsp;训练&nbsp;男子</span><span>￥335 x 1</span></div>
+						<img src="../icon/20.png" class="img2">
+					</div>
+					<div>
+						<img src="../cart/2.png" class="img1">
+						<div class="word"><span class="span1">玉兰油多效维护三部曲套装</span><span>￥199 x 2</span></div>
+						<img src="../icon/20.png" class="img2">
+					</div>
+					<div>
+						<img src="../cart/3.png" class="img1">
+						<div class="word"><span class="span1">Apple iphone 7 (A1660)</span><span>￥6188 x 1</span></div>
+						<img src="../icon/20.png" class="img2">
+					</div>
+					<div>
+						<img src="../cart/4.png" class="img1">
+						<div class="word"><span class="span1">飞利浦面条机 HR2356/31</span><span>￥665 x 4</span></div>
+						<img src="../icon/20.png" class="img2">
+					</div>
+					<div>
+						<img src="../cart/5.png" class="img1">
+						<div class="word"><span class="span1">罗技G29 力反馈游戏方向盘</span><span>￥2999 x 1</span></div>
+						<img src="../icon/20.png" class="img2">
+					</div>
+					<div>
+						<img src="../cart/1.png" class="img1">
+						<div class="word"><span class="span1">adidas&nbsp;阿迪达斯&nbsp;训练&nbsp;男子</span><span>￥335 x 1</span></div>
+						<img src="../icon/20.png" class="img2">
+					</div>
+					<div>
+						<img src="../cart/2.png" class="img1">
+						<div class="word"><span class="span1">玉兰油多效维护三部曲套装</span><span>￥199 x 2</span></div>
+						<img src="../icon/20.png" class="img2">
+					</div>
+					<div>
+						<img src="../cart/3.png" class="img1">
+						<div class="word"><span class="span1">Apple iphone 7 (A1660)</span><span>￥6188 x 1</span></div>
+						<img src="../icon/20.png" class="img2">
+					</div>
+					<div>
+						<img src="../cart/4.png" class="img1">
+						<div class="word"><span class="span1">飞利浦面条机 HR2356/31</span><span>￥665 x 4</span></div>
+						<img src="../icon/20.png" class="img2">
+					</div>
+					<div>
+						<img src="../cart/5.png" class="img1">
+						<div class="word"><span class="span1">罗技G29 力反馈游戏方向盘</span><span>￥2999 x 1</span></div>
+						<img src="../icon/20.png" class="img2">
+					</div>
+				    </div>
+					<div class="shop-car">
+						<span>共27件商品 共计￥0.00</span>
+						<input type="button" name="btn" value="去购物车" class="btn">
+					</div>			
+				</div>
+
+			</div>
+		</div>
+	</header>
+
+    <!--banner区-->
+    <div class="banner">
+    	<div class="top">
+    		<div>
+    		<span>数码城</span>
+    		<span>天黑黑</span>
+    		<span>团购</span>
+    		<span>发现</span>
+    		<span>二手特价</span>
+    		<span>名品汇</span>
+    	    </div>
+    	</div>
+    	<div class="content">
+            <!--左侧导航-->
+            <div class="boxs"></div>
+            <div class="left" id="lleft">
+            	<div class="title">
+            		<img src="../icon/18.png">
+            		<span class="word">商品分类</span>
+            	</div>
+            	<div class="dhleft" id="o"><span class="left1">家用电器</span><span class="right1">&gt;</span></div>
+            	<div class="dhleft" id="j"><span class="left1">手机、运营商、数码</span><span class="right1">&gt;</span></div>
+            	<div class="dhleft" id="o"><span class="left1">电脑、办公</span><span class="right1">&gt;</span></div>
+            	<div class="dhleft" id="j"><span class="left1">家居、家具、家装、厨具</span><span class="right1">&gt;</span></div>
+            	<div class="dhleft" id="o"><span class="left1">男装、女装、童装、内衣</span><span class="right1">&gt;</span></div>
+            	<div class="dhleft" id="j"><span class="left1">化妆、清洁、宠物</span><span class="right1">&gt;</span></div>
+            	<div class="dhleft" id="o"><span class="left1">运动户外、钟表</span><span class="right1">&gt;</span></div>
+            	<div class="dhleft" id="j"><span class="left1">汽车、汽车用品</span><span class="right1">&gt;</span></div>
+            	<div class="dhleft" id="j"><span class="left1">母婴、玩具乐器</span><span class="right1">&gt;</span></div>
+            	<div class="dhleft"><span class="left1">食品、酒类、生鲜、特产</span><span class="right1">&gt;</span></div>
+            	<div class="dhleft"><span class="left1">医药保健</span><span class="right1">&gt;</span></div>
+            	<div class="dhleft"><span class="left1">图书、音像、电子书</span><span class="right1">&gt;</span></div>
+            	<div class="dhleft"><span class="left1">彩票、旅行、充值、票务</span><span class="right1">&gt;</span></div>
+            	<div class="dhleft"><span class="left1">理财、众筹、白条、保险</span><span class="right1">&gt;</span></div>
+            </div>
+
+            <div class="small-dh" id="small-dh1">
+            	<div class="da">
+            	<div>
+            		<span class="strong">电器</span>
+            		<span class="l">|</span>
+            		<span class="xiao"><span>手机</span>&nbsp;&nbsp;&nbsp;<span>对讲机</span>&nbsp;&nbsp;&nbsp;<span>以旧换新</span>&nbsp;&nbsp;&nbsp;<span>手机维修</span>
+            	</div>
+            	<div>
+            		<span class="strong">冰箱</span>
+            		<span class="l">|</span>
+            		<span class="xiao"><span>充话费/流量</span>&nbsp;&nbsp;&nbsp;<span>170选号</span>&nbsp;&nbsp;&nbsp;<span>合约机</span>&nbsp;&nbsp;&nbsp;<span>办套餐</span>&nbsp;&nbsp;&nbsp;<span>选号码</span>&nbsp;&nbsp;&nbsp;<span>固话宽带</span>&nbsp;&nbsp;&nbsp;<span>京东通信</span>&nbsp;&nbsp;&nbsp;<span>中国移动</span>&nbsp;<span>中国联通</span>&nbsp;&nbsp;&nbsp;<span>中国电信</span>
+            	</div>
+            	<div>
+            		<span class="strong">洗衣机</span>
+            		<span class="l">|</span>
+            		<span class="xiao"><span>手机壳</span>&nbsp;&nbsp;&nbsp;<span>贴膜</span>&nbsp;&nbsp;&nbsp;<span>手机存储卡</span>&nbsp;&nbsp;&nbsp;<span>数据线</span>&nbsp;&nbsp;&nbsp;<span>充电器</span>&nbsp;&nbsp;&nbsp;<span>手机耳机</span>&nbsp;&nbsp;&nbsp;<span>创意配件</span>&nbsp;&nbsp;&nbsp;<span>手机饰品</span>&nbsp;&nbsp;&nbsp;<span>手机电池</span>&nbsp;&nbsp;&nbsp;<span>苹果周边</span>&nbsp;&nbsp;&nbsp;<span>移动电源</span>&nbsp;&nbsp;&nbsp;<span>蓝牙耳机</span>&nbsp;&nbsp;&nbsp;<span>手机支架</span>&nbsp;&nbsp;&nbsp;<span>车载配件</span>&nbsp;&nbsp;&nbsp;<span>拍照配件</span></span>
+            	</div>
+            	<div>
+            		<span class="strong">电脑</span>
+            		<span class="l">|</span>
+            		<span class="xiao"><span>数码相机</span>&nbsp;&nbsp;&nbsp;<span>单电/微单相机</span>&nbsp;&nbsp;&nbsp;<span>单反相机</span>&nbsp;&nbsp;&nbsp;<span>拍立得</span>&nbsp;&nbsp;&nbsp;<span>流动相机</span>&nbsp;&nbsp;&nbsp;<span>摄像机</span>&nbsp;&nbsp;&nbsp;<span>镜头</span>&nbsp;&nbsp;&nbsp;<span>户外器材</span>&nbsp;&nbsp;&nbsp;<span>影视器材</span>&nbsp;&nbsp;&nbsp;<span>冲印服务</span>&nbsp;&nbsp;&nbsp;<span>数码相框</span></span>
+            	</div>
+            	<div>
+            		<span class="strong">微波炉</span>
+            		<span class="l">|</span>
+            		<span class="xiao"><span>存储卡</span>&nbsp;&nbsp;&nbsp;<span>三脚架/云科</span>&nbsp;&nbsp;&nbsp;<span>相机框</span>&nbsp;&nbsp;&nbsp;<span>冰箱</span>&nbsp;&nbsp;&nbsp;<span>闪光灯/手柄</span>&nbsp;&nbsp;&nbsp;<span>相机清洁/贴膜机</span>&nbsp;&nbsp;&nbsp;<span>配件</span>&nbsp;&nbsp;&nbsp;<span>镜头配件</span>&nbsp;&nbsp;&nbsp;<span>读卡器</span>&nbsp;&nbsp;&nbsp;<span>文本电池/充电器</span></span>
+            	</div>
+            	<div>
+            		<span class="strong">开水壶</span>
+            		<span class="l">|</span>
+            		<span class="xiao"><span>耳机/耳塞</span>&nbsp;&nbsp;&nbsp;<span>音箱/音响</span>&nbsp;&nbsp;&nbsp;<span>有线/无线耳机</span>&nbsp;&nbsp;&nbsp;<span>收音机</span>&nbsp;&nbsp;&nbsp;<span>电吹风</span>&nbsp;&nbsp;&nbsp;<span>MP3/MP4</span>&nbsp;&nbsp;&nbsp;<span>专业数码</span></span>
+            	</div>
+            	<div>
+            		<span class="strong">吹风机</span>
+            		<span class="l">|</span>
+            		<span class="xiao"><span>智能手环</span>&nbsp;&nbsp;&nbsp;<span>智能手表</span>&nbsp;&nbsp;&nbsp;<span>智能机器人</span>&nbsp;&nbsp;&nbsp;<span>运动遥控器</span>&nbsp;&nbsp;&nbsp;<span>智能空调</span>&nbsp;&nbsp;&nbsp;<span>智能音箱</span>&nbsp;&nbsp;&nbsp;<span>智能水表</span>&nbsp;&nbsp;&nbsp;<span>体温计</span>&nbsp;&nbsp;&nbsp;<span>无人机</span>&nbsp;&nbsp;&nbsp;<span>其他商品</span></span>
+            	</div>
+            	<div>
+            		<span class="strong">缝纫机</span>
+            		<span class="l">|</span>
+            		<span class="xiao"><span>学生用品</span>&nbsp;&nbsp;&nbsp;<span>解读机</span>&nbsp;&nbsp;&nbsp;<span>早教书籍</span>&nbsp;&nbsp;&nbsp;<span>圆珠笔</span>&nbsp;&nbsp;&nbsp;<span>橡皮擦</span>&nbsp;&nbsp;&nbsp;<span>作业本</span>&nbsp;&nbsp;&nbsp;<span>复读机</span></span>
+            	</div>
+                </div>
+            </div>
+            
+            <div class="small-dh" id="small-dh2">
+            	<div class="da">
+            	<div>
+            		<span class="strong">手机通讯</span>
+            		<span class="l">|</span>
+            		<span class="xiao"><span>手机</span>&nbsp;&nbsp;&nbsp;<span>对讲机</span>&nbsp;&nbsp;&nbsp;<span>以旧换新</span>&nbsp;&nbsp;&nbsp;<span>手机维修</span>
+            	</div>
+            	<div>
+            		<span class="strong">运营商</span>
+            		<span class="l">|</span>
+            		<span class="xiao"><span>充话费/流量</span>&nbsp;&nbsp;&nbsp;<span>170选号</span>&nbsp;&nbsp;&nbsp;<span>合约机</span>&nbsp;&nbsp;&nbsp;<span>办套餐</span>&nbsp;&nbsp;&nbsp;<span>选号码</span>&nbsp;&nbsp;&nbsp;<span>固话宽带</span>&nbsp;&nbsp;&nbsp;<span>京东通信</span>&nbsp;&nbsp;&nbsp;<span>中国移动</span>&nbsp;<span>中国联通</span>&nbsp;&nbsp;&nbsp;<span>中国电信</span>
+            	</div>
+            	<div>
+            		<span class="strong">手机配件</span>
+            		<span class="l">|</span>
+            		<span class="xiao"><span>手机壳</span>&nbsp;&nbsp;&nbsp;<span>贴膜</span>&nbsp;&nbsp;&nbsp;<span>手机存储卡</span>&nbsp;&nbsp;&nbsp;<span>数据线</span>&nbsp;&nbsp;&nbsp;<span>充电器</span>&nbsp;&nbsp;&nbsp;<span>手机耳机</span>&nbsp;&nbsp;&nbsp;<span>创意配件</span>&nbsp;&nbsp;&nbsp;<span>手机饰品</span>&nbsp;&nbsp;&nbsp;<span>手机电池</span>&nbsp;&nbsp;&nbsp;<span>苹果周边</span>&nbsp;&nbsp;&nbsp;<span>移动电源</span>&nbsp;&nbsp;&nbsp;<span>蓝牙耳机</span>&nbsp;&nbsp;&nbsp;<span>手机支架</span>&nbsp;&nbsp;&nbsp;<span>车载配件</span>&nbsp;&nbsp;&nbsp;<span>拍照配件</span></span>
+            	</div>
+            	<div>
+            		<span class="strong">摄影摄像</span>
+            		<span class="l">|</span>
+            		<span class="xiao"><span>数码相机</span>&nbsp;&nbsp;&nbsp;<span>单电/微单相机</span>&nbsp;&nbsp;&nbsp;<span>单反相机</span>&nbsp;&nbsp;&nbsp;<span>拍立得</span>&nbsp;&nbsp;&nbsp;<span>流动相机</span>&nbsp;&nbsp;&nbsp;<span>摄像机</span>&nbsp;&nbsp;&nbsp;<span>镜头</span>&nbsp;&nbsp;&nbsp;<span>户外器材</span>&nbsp;&nbsp;&nbsp;<span>影视器材</span>&nbsp;&nbsp;&nbsp;<span>冲印服务</span>&nbsp;&nbsp;&nbsp;<span>数码相框</span></span>
+            	</div>
+            	<div>
+            		<span class="strong">数码配件</span>
+            		<span class="l">|</span>
+            		<span class="xiao"><span>存储卡</span>&nbsp;&nbsp;&nbsp;<span>三脚架/云科</span>&nbsp;&nbsp;&nbsp;<span>相机框</span>&nbsp;&nbsp;&nbsp;<span>冰箱</span>&nbsp;&nbsp;&nbsp;<span>闪光灯/手柄</span>&nbsp;&nbsp;&nbsp;<span>相机清洁/贴膜机</span>&nbsp;&nbsp;&nbsp;<span>配件</span>&nbsp;&nbsp;&nbsp;<span>镜头配件</span>&nbsp;&nbsp;&nbsp;<span>读卡器</span>&nbsp;&nbsp;&nbsp;<span>文本电池/充电器</span></span>
+            	</div>
+            	<div>
+            		<span class="strong">影音娱乐</span>
+            		<span class="l">|</span>
+            		<span class="xiao"><span>耳机/耳塞</span>&nbsp;&nbsp;&nbsp;<span>音箱/音响</span>&nbsp;&nbsp;&nbsp;<span>有线/无线耳机</span>&nbsp;&nbsp;&nbsp;<span>收音机</span>&nbsp;&nbsp;&nbsp;<span>电吹风</span>&nbsp;&nbsp;&nbsp;<span>MP3/MP4</span>&nbsp;&nbsp;&nbsp;<span>专业数码</span></span>
+            	</div>
+            	<div>
+            		<span class="strong">智能设备</span>
+            		<span class="l">|</span>
+            		<span class="xiao"><span>智能手环</span>&nbsp;&nbsp;&nbsp;<span>智能手表</span>&nbsp;&nbsp;&nbsp;<span>智能机器人</span>&nbsp;&nbsp;&nbsp;<span>运动遥控器</span>&nbsp;&nbsp;&nbsp;<span>智能空调</span>&nbsp;&nbsp;&nbsp;<span>智能音箱</span>&nbsp;&nbsp;&nbsp;<span>智能水表</span>&nbsp;&nbsp;&nbsp;<span>体温计</span>&nbsp;&nbsp;&nbsp;<span>无人机</span>&nbsp;&nbsp;&nbsp;<span>其他商品</span></span>
+            	</div>
+            	<div>
+            		<span class="strong">电子教育</span>
+            		<span class="l">|</span>
+            		<span class="xiao"><span>学生用品</span>&nbsp;&nbsp;&nbsp;<span>解读机</span>&nbsp;&nbsp;&nbsp;<span>早教书籍</span>&nbsp;&nbsp;&nbsp;<span>圆珠笔</span>&nbsp;&nbsp;&nbsp;<span>橡皮擦</span>&nbsp;&nbsp;&nbsp;<span>作业本</span>&nbsp;&nbsp;&nbsp;<span>复读机</span></span>
+            	</div>
+                </div>
+            </div>
+
+
+
+
+
+
+
+
+
+
+
+
+    		<!--轮播图-->
+    		<div class="total"  id="slide">
+    		<div class="slide">
+    			<div class="active"><img src="../focus-carousel/1.png"></div>
+    			<div><img src="../focus-carousel/2.jpg"></div>
+    			<div><img src="../focus-carousel/3.jpg"></div>
+    			<div><img src="../focus-carousel/4.jpg"></div>
+    			<div><img src="../focus-carousel/5.jpg"></div>
+    		</div>
+    		<!--圆点-->
+    		<div class="dot" id="dot">
+    			<span class="actives"></span>
+    			<span></span>
+    			<span></span>
+    			<span></span>
+    			<span></span>
+    		</div>
+    		<!--上一张 下一张-->
+    		<div class="and">
+    			<div class="next" id="next">
+    				<img src="../focus-carousel/pre.png">
+    			</div>
+    			<div class="prev" id="prev">
+    				<img src="../focus-carousel/pre2.png">
+    			</div>
+    		</div>
+    	    </div>
+    		<!--右侧报文-->
+    		<div class="right">
+    			<div class="tops">
+    				<div class="one"><span class="pone">慕快报</span><span class="ptwo">更多&gt;</span></div>
+                    <p><span>[特惠]</span>&nbsp;精选图书每满150减50</p>
+                    <p><span>[公告]</span>&nbsp;因广州图书仓搬仓升级配送延迟</p>
+                    <p><span>[特惠]</span>&nbsp;爆款手机12期免息&nbsp;抽奖赢电视</p>
+                    <p><span>[公告]</span>&nbsp;广东、福建因台风原因配送延迟</p>
+                    <p><span>[特惠]</span>&nbsp;大闸蟹领卷满399减180</p>
+    			</div>
+    			<div class="middles">
+    				<span><img src="../icon/1.png"><a class="word">话费</a></span>
+    				<span><img src="../icon/2.png"><a class="word">机票</a></span>
+    				<span><img src="../icon/3.png"><a class="word">电影票</a></span>
+    				<span class="qq"><img src="../icon/4.png"><a class="word">游戏</a></span>
+    				<span><img src="../icon/5.png"><a class="word">彩票</a></span>
+    				<span><img src="../icon/6.png"><a class="word">加油卡</a></span>
+    				<span><img src="../icon/7.png"><a class="word">酒店</a></span>
+    				<span class="qq"><img src="../icon/8.png"><a class="word">火车票</a></span>
+    				<span><img src="../icon/9.png"><a class="word">众筹</a></span>
+    				<span><img src="../icon/10.png"><a class="word">理财</a></span>
+    				<span><img src="../icon/11.png"><a class="word">礼品卡</a></span>
+    				<span class="qq"><img src="../icon/12.png"><a class="word">白条</a></span>
+    			</div>
+    			<div class="bottoms">
+    				<img src="../ad.png">
+    			</div>
+    		</div>
+    		
+    	</div>
+    </div> 
+
+    <!--楼层区-->
+    <div class="floor" id="floor">
+    	<div class="word">
+    		<div class="left">
+    		    <span>1F<a name="1f"></a></span>
+    		    <h3>服装鞋包</h3>
+    	    </div>
+    	    <div class="right right-one">
+    	    	<a href="#" class="dp" id="dp">大牌&nbsp;&nbsp;&nbsp;&nbsp;</a>|
+    	    	<a href="#" id="mz">&nbsp;&nbsp;&nbsp;&nbsp;男装&nbsp;&nbsp;&nbsp;&nbsp;</a>|
+    	    	<a href="#" id="gz">&nbsp;&nbsp;&nbsp;&nbsp;女装</a>
+    	    </div>
+    	    <img src="../floor-arrow.png">
+    	</div>
+    	<hr>
+
+    	<div class="img">
+    		<div>
+    			<img src="../floor/1.png">
+    			<span>1匡威男棒球开衫外套2015</span>
+    			<span class="red">￥479</span>
+    		</div>
+    		<div>
+    			<img src="../floor/1.png">
+    			<span>adidas&nbsp;阿迪达斯&nbsp;训练&nbsp;男子</span>
+    			<span class="red">￥335</span>
+    		</div>
+    		<div>
+    			<img src="../floor/1.jpg">
+    			<span>必迈BMAI一体织跑步短袖T恤</span>
+    			<span class="red">￥159</span>
+    		</div>
+    		<div>
+    			<img src="../floor/1.jpg">
+    			<span>NBA袜子半毛圈运动高邦棉袜</span>
+    			<span class="red">￥65</span>
+    		</div>
+    		<div>
+    			<img src="../floor/1.png">
+    			<span>特步官方运动帽男女帽子2016</span>
+    			<span class="red">￥69</span>
+    		</div>
+    		<div>
+    			<img src="../floor/1.png">
+    			<span>KELME足球训练防寒防风手套</span>
+    			<span class="red">￥4999</span>
+    		</div>
+    		<div>
+    			<img src="../floor/2.jpg">
+    			<span>战地吉普三合一冲锋衣</span>
+    			<span class="red">￥289</span>
+    		</div>
+    		<div>
+    			<img src="../floor/2.jpg">
+    			<span>探路者户外男士徒步鞋</span>
+    			<span class="red">￥369</span>
+    		</div>
+    		<div>
+    			<img src="../floor/1.png">
+    			<span>羽绒服2015秋冬新款轻薄男士</span>
+    			<span class="red">￥399</span>
+    		</div>
+    		<div>
+    			<img src="../floor/1.png">
+    			<span>朔溪鞋涉水鞋户外鞋</span>
+    			<span class="red">￥689</span>
+    		</div>
+    		<div>
+    			<img src="../floor/3.jpg">
+    			<span>旅行背包多功能双肩背包</span>
+    			<span class="red">￥269</span>
+    		</div>
+    		<div>
+    			<img src="../floor/3.jpg">
+    			<span>户外旅行双肩背包OS0099</span>
+    			<span class="red">￥99</span>
+    		</div>
+    	</div>
+    	<div class="img2" style="display: none">
+    		<div>
+    		<img src="../floor/6.jpg">
+    		<span>2adidas 阿迪达斯 训练 男子</span>
+    		<span class="red">￥335</span>
+    	    </div>
+    	</div>
+    	<div class="img3">
+    		<div>
+    		<img src="../floor/4.jpg">
+    		<span>3必迈BMAI一体织跑步短袖T恤</span>
+    		<span class="red">￥159</span>
+    	    </div>
+    	</div>
+    </div>
+
+    <!--floor 2-->
+    <div class="floor" id="floor2">
+    	<div class="word">
+    		<div class="left">
+    		    <span>2F<a name="2f"></a></span>
+    		    <h3>个护美妆</h3>
+    	    </div>
+    	    <div class="right">
+    	    	<a href="#" class="dp" id="dp2">热门&nbsp;&nbsp;&nbsp;&nbsp;</a>|
+    	    	<a href="#" id="mz2">&nbsp;&nbsp;&nbsp;&nbsp;国际大牌&nbsp;&nbsp;&nbsp;&nbsp;</a>|
+    	    	<a href="#" id="gz2">&nbsp;&nbsp;&nbsp;&nbsp;国际名品</a>
+    	    </div>
+    	    <img src="../floor-arrow.png" class="floor-img2">
+    	</div>
+    	<hr>
+
+    	<div class="img">
+    		<div>
+    			<img src="../floor/5.jpg">
+    			<span>1韩束红石榴鲜活水盈七件套装</span>
+    			<span class="red">￥169</span>
+    		</div>
+    		<div>
+    			<img src="../floor/5.jpg">
+    			<span>温碧泉八杯水亲亲水润五件套装</span>
+    			<span class="red">￥198</span>
+    		</div>
+    		<div>
+    			<img src="../floor/5.jpg">
+    			<span>御泥坊红酒透亮矿物蚕丝面膜贴</span>
+    			<span class="red">￥79.9</span>
+    		</div>
+    		<div>
+    			<img src="../floor/5.jpg">
+    			<span>吉列手动剃须刀峰影致护</span>
+    			<span class="red">￥228</span>
+    		</div>
+    		<div>
+    			<img src="../floor/5.jpg">
+    			<span>Mediheal水润保湿面膜</span>
+    			<span class="red">￥119</span>
+    		</div>
+    		<div>
+    			<img src="../floor/5.jpg">
+    			<span>纳亦其尔芦荟舒缓保湿凝胶</span>
+    			<span class="red">￥39</span>
+    		</div>
+    		<div>
+    			<img src="../floor/1.png">
+    			<span>宝拉珍选基础护肤旅行四件套</span>
+    			<span class="red">￥299</span>
+    		</div>
+    		<div>
+    			<img src="../floor/1.png">
+    			<span>温碧泉透心润基础五件套装</span>
+    			<span class="red">￥257</span>
+    		</div>
+    		<div>
+    			<img src="../floor/1.png">
+    			<span>玉兰油多效维护三部曲套装</span>
+    			<span class="red">￥199</span>
+    		</div>
+    		<div>
+    			<img src="../floor/1.png">
+    			<span>Loreal火山岩轻度祛痘洗面膏</span>
+    			<span class="red">￥39</span>
+    		</div>
+    		<div>
+    			<img src="../floor/1.png">
+    			<span>百雀羚碧透水润必现精华水</span>
+    			<span class="red">￥169</span>
+    		</div>
+    		<div>
+    			<img src="../floor/1.png">
+    			<span>珀莱雅水润精华三件套</span>
+    			<span class="red">￥99</span>
+    		</div>
+    	</div>
+    	<div class="img2" style="display: none">
+    		<div>
+    		<img src="../floor/6.jpg">
+    		<span>2adidas 阿迪达斯 训练 男子</span>
+    		<span class="red">￥335</span>
+    	    </div>
+    	</div>
+    	<div class="img3">
+    		<div>
+    		<img src="../floor/4.jpg">
+    		<span>3必迈BMAI一体织跑步短袖T恤</span>
+    		<span class="red">￥159</span>
+    	    </div>
+    	</div>
+    </div>
+
+
+    <!--floor 3-->
+    <div class="floor" id="floor3">
+    	<div class="word">
+    		<div class="left">
+    		    <span>3F<a name="3f"></a></span>
+    		    <h3>手机通讯</h3>
+    	    </div>
+    	    <div class="right">
+    	    	<a href="#" class="dp" id="dp3">热门&nbsp;&nbsp;&nbsp;&nbsp;</a>|
+    	    	<a href="#" id="mz3">&nbsp;&nbsp;&nbsp;&nbsp;品质优选&nbsp;&nbsp;&nbsp;&nbsp;</a>|
+    	    	<a href="#" id="gz3">&nbsp;&nbsp;&nbsp;&nbsp;新机尝鲜</a>
+    	    </div>
+    	    <img src="../floor-arrow.png" class="floor-img2">
+    	</div>
+    	<hr>
+
+    	<div class="img">
+    		<div>
+    			<img src="../floor/7.jpg">
+    			<span>1摩托罗拉 Moto Z Play</span>
+    			<span class="red">￥3999</span>
+    		</div>
+    		<div>
+    			<img src="../floor/7.jpg">
+    			<span>Apple iphone 7 (A1660)</span>
+    			<span class="red">￥6188</span>
+    		</div>
+    		<div>
+    			<img src="../floor/7.jpg">
+    			<span>小米 Note 全网通 白色</span>
+    			<span class="red">￥999</span>
+    		</div>
+    		<div>
+    			<img src="../floor/7.jpg">
+    			<span>小米5 全网通 标准版 3GB内存</span>
+    			<span class="red">￥1999</span>
+    		</div>
+    		<div>
+    			<img src="../floor/7.jpg">
+    			<span>荣耀7i 海岛蓝 移动联通4G手机</span>
+    			<span class="red">￥1099</span>
+    		</div>
+    		<div>
+    			<img src="../floor/7.jpg">
+    			<span>乐视(Le) 乐2 (X620) 32GB</span>
+    			<span class="red">￥1099</span>
+    		</div>
+    		<div>
+    			<img src="../floor/7.jpg">
+    			<span>OPPO R9 4GB+64GB内存版</span>
+    			<span class="red">￥2499</span>
+    		</div>
+    		<div>
+    			<img src="../floor/7.jpg">
+    			<span>魅蓝Note3 全网通公开版</span>
+    			<span class="red">￥899</span>
+    		</div>
+    		<div>
+    			<img src="../floor/7.jpg">
+    			<span>飞利浦 X818 香槟金 全网通4G</span>
+    			<span class="red">￥1998</span>
+    		</div>
+    		<div>
+    			<img src="../floor/7.jpg">
+    			<span>三星 Galaxy S7 (G9300)</span>
+    			<span class="red">￥4088</span>
+    		</div>
+    		<div>
+    			<img src="../floor/7.jpg">
+    			<span>华为荣耀7 双卡双待双通</span>
+    			<span class="red">￥1128</span>
+    		</div>
+    		<div>
+    			<img src="../floor/7.jpg">
+    			<span>努比亚(nubia)Z7Max(Nx505j)</span>
+    			<span class="red">￥728</span>
+    		</div>
+    	</div>
+    	<div class="img2" style="display: none">
+    		<div>
+    		<img src="../floor/6.jpg">
+    		<span>2adidas 阿迪达斯 训练 男子</span>
+    		<span class="red">￥335</span>
+    	    </div>
+    	</div>
+    	<div class="img3">
+    		<div>
+    		<img src="../floor/4.jpg">
+    		<span>3必迈BMAI一体织跑步短袖T恤</span>
+    		<span class="red">￥159</span>
+    	    </div>
+    	</div>
+    </div>
+
+    <!--floor 4-->
+    <div class="floor" id="floor4">
+    	<div class="word">
+    		<div class="left">
+    		    <span>4F<a name="4f"></a></span>
+    		    <h3>家用电器</h3>
+    	    </div>
+    	    <div class="right">
+    	    	<a href="#" class="dp" id="dp4">热门&nbsp;&nbsp;&nbsp;&nbsp;</a>|
+    	    	<a href="#" id="mz4">&nbsp;&nbsp;&nbsp;&nbsp;大家电&nbsp;&nbsp;&nbsp;&nbsp;</a>|
+    	    	<a href="#" id="gz4">&nbsp;&nbsp;&nbsp;&nbsp;生活电器</a>
+    	    </div>
+    	    <img src="../floor-arrow.png" class="floor-img2">
+    	</div>
+    	<hr>
+
+    	<div class="img">
+    		<div>
+    			<img src="../floor/8.jpg">
+    			<span>1暴风TV 超体电视 40X 40英寸</span>
+    			<span class="red">￥1299</span>
+    		</div>
+    		<div>
+    			<img src="../floor/8.jpg">
+    			<span>小米(MI) L55M5-AA 55英寸</span>
+    			<span class="red">￥3699</span>
+    		</div>
+    		<div>
+    			<img src="../floor/8.jpg">
+    			<span>飞利浦HTD5580/93 音响</span>
+    			<span class="red">￥2999</span>
+    		</div>
+    		<div>
+    			<img src="../floor/8.jpg">
+    			<span>金门子H108 5.1套装音响组合</span>
+    			<span class="red">￥1198</span>
+    		</div>
+    		<div>
+    			<img src="../floor/8.jpg">
+    			<span>方太ENJOY云魔方抽油烟机</span>
+    			<span class="red">￥4390</span>
+    		</div>
+    		<div>
+    			<img src="../floor/8.jpg">
+    			<span>美的60升预约洗浴电热水器</span>
+    			<span class="red">￥1099</span>
+    		</div>
+    		<div>
+    			<img src="../floor/8.jpg">
+    			<span>九阳电饭煲多功能智能电饭煲</span>
+    			<span class="red">￥159</span>
+    		</div>
+    		<div>
+    			<img src="../floor/8.jpg">
+    			<span>美的电烤箱家用大容量</span>
+    			<span class="red">￥329</span>
+    		</div>
+    		<div>
+    			<img src="../floor/8.jpg">
+    			<span>奥克斯(AUX)936破塑料理机</span>
+    			<span class="red">￥1599</span>
+    		</div>
+    		<div>
+    			<img src="../floor/8.jpg">
+    			<span>飞利浦面条机 HR2356/31</span>
+    			<span class="red">￥665</span>
+    		</div>
+    		<div>
+    			<img src="../floor/8.jpg">
+    			<span>松下NU-JA100W 家用蒸烤箱</span>
+    			<span class="red">￥1799</span>
+    		</div>
+    		<div>
+    			<img src="../floor/8.jpg">
+    			<span>飞利浦咖啡机 HD7751/00</span>
+    			<span class="red">￥1299</span>
+    		</div>
+    	</div>
+    	<div class="img2" style="display: none">
+    		<div>
+    		<img src="../floor/6.jpg">
+    		<span>2adidas 阿迪达斯 训练 男子</span>
+    		<span class="red">￥335</span>
+    	    </div>
+    	</div>
+    	<div class="img3">
+    		<div>
+    		<img src="../floor/4.jpg">
+    		<span>3必迈BMAI一体织跑步短袖T恤</span>
+    		<span class="red">￥159</span>
+    	    </div>
+    	</div>
+    </div>
+
+    <!--floor 5-->
+    <div class="floor" id="floor5">
+    	<div class="word">
+    		<div class="left">
+    		    <span>5F<a name="5f"></a></span>
+    		    <h3>电脑数码</h3>
+    	    </div>
+    	    <div class="right">
+    	    	<a href="#" class="dp" id="dp5">热门&nbsp;&nbsp;&nbsp;&nbsp;</a>|
+    	    	<a href="#" id="mz5">&nbsp;&nbsp;&nbsp;&nbsp;电脑/平板&nbsp;&nbsp;&nbsp;&nbsp;</a>|
+    	    	<a href="#" id="gz5">&nbsp;&nbsp;&nbsp;&nbsp;热门影音</a>
+    	    </div>
+    	    <img src="../floor-arrow.png" class="floor-img2">
+    	</div>
+    	<hr>
+
+    	<div class="img">
+    		<div>
+    			<img src="../floor/9.jpg">
+    			<span>1戴尔成就Vostro 3800-R6308</span>
+    			<span class="red">￥2999</span>
+    		</div>
+    		<div>
+    			<img src="../floor/9.jpg">
+    			<span>联想IdeaCenter C560</span>
+    			<span class="red">￥5399</span>
+    		</div>
+    		<div>
+    			<img src="../floor/9.jpg">
+    			<span>惠普260-p039cn台式电脑</span>
+    			<span class="red">￥3099</span>
+    		</div>
+    		<div>
+    			<img src="../floor/9.jpg">
+    			<span>华硕飞行堡垒旗舰版FX-PRO</span>
+    			<span class="red">￥6599</span>
+    		</div>
+    		<div>
+    			<img src="../floor/9.jpg">
+    			<span>惠普(HP)暗影精灵Ⅱ代PLUS</span>
+    			<span class="red">￥12999</span>
+    		</div>
+    		<div>
+    			<img src="../floor/9.jpg">
+    			<span>联想(Lenovo)小新700电竞版</span>
+    			<span class="red">￥5999</span>
+    		</div>
+    		<div>
+    			<img src="../floor/9.jpg">
+    			<span>游戏背光牧马人机械手感键盘</span>
+    			<span class="red">￥499</span>
+    		</div>
+    		<div>
+    			<img src="../floor/9.jpg">
+    			<span>罗技ik1200背光键盘保护套</span>
+    			<span class="red">￥799</span>
+    		</div>
+    		<div>
+    			<img src="../floor/9.jpg">
+    			<span>西部数据2.5英寸移动硬盘1TB</span>
+    			<span class="red">￥419</span>
+    		</div>
+    		<div>
+    			<img src="../floor/9.jpg">
+    			<span>新睿翼3TB 2.5英寸 移动硬盘</span>
+    			<span class="red">￥849</span>
+    		</div>
+    		<div>
+    			<img src="../floor/9.jpg">
+    			<span>Rii mini i28无线迷你键盘鼠标</span>
+    			<span class="red">￥349</span>
+    		</div>
+    		<div>
+    			<img src="../floor/9.jpg">
+    			<span>罗技G29 力反馈游戏方向盘</span>
+    			<span class="red">￥2999</span>
+    		</div>
+    	</div>
+    	<div class="img2" style="display: none">
+    		<div>
+    		<img src="../floor/6.jpg">
+    		<span>2adidas 阿迪达斯 训练 男子</span>
+    		<span class="red">￥335</span>
+    	    </div>
+    	</div>
+    	<div class="img3">
+    		<div>
+    		<img src="../floor/4.jpg">
+    		<span>3必迈BMAI一体织跑步短袖T恤</span>
+    		<span class="red">￥159</span>
+    	    </div>
+    	</div>
+    </div>
+
+
+    <!--友情链接区-->
+    <div class="link">
+    	<div class="one">
+    		<div>
+    		<h3>消费者保障</h3>
+    		<p><span>保障范围</span><span>退货退款流程</span><span>服务中心</span></p>
+    		<p><span>更多特色服务</span>
+    		</p>
+    		</div>
+    	</div>
+    	<div class="one">
+    		<div>
+    		<h3>新手上路</h3>
+    		<p><span>新手专区</span><span>消费警示</span><span>交易安全</span></p>
+    		<p><span>24小时在线帮助</span><span>免费开店</span>
+    		</p>
+    	    </div>
+    	</div>
+    	<div class="one">
+    		<div>
+    		<h3>付款方式</h3>
+    		<p><span>快捷支付</span><span>信用卡</span><span>余额宝</span><span>蜜蜂花啊</span></p>
+    		<p><span>货到付款</span></p>
+    	    </div>
+    	</div>
+    	<div class="one">
+    		<div>
+    		<h3>慕淘特色</h3>
+    		<p><span>手机慕淘</span><span>慕淘信</span><span>大众评审</span><span>B格指南</span></p>
+    	    </div>
+    	</div>
+    </div>
+
+	<!--页脚区-->
+	<footer>
+		<div class="main-foot">
+			<div class="one">
+				<span>关于慕淘</span>
+				<span>合作伙伴</span>
+				<span>营销中心</span>
+				<span>廉政举报</span>
+				<span>联系客服</span>
+				<span>开放平台</span>
+				<span>诚征英才</span>
+				<span>联系我们</span>
+				<span>网站地图</span>
+				<span>法律声明</span>
+				<span>知识产权</span>
+			</div>
+			<div class="two">&copy;&nbsp;2016&nbsp;imooc.com&nbsp;All&nbsp;Rights&nbsp;Reserved</div>
+		</div>
+	</footer>
+	<script type="text/javascript" src="jquery/jquery-3.3.1.js"></script>
+	<script type="text/javascript" src="one.js"></script>
+</body>
+</html>
